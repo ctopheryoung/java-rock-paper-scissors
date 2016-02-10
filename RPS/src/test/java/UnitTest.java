@@ -10,18 +10,16 @@ public class UnitTest {
   }
 
   @Test
-  public void checkWinner_rockBeatsScissors_true() {
+  public void checkWinner_paperBeatsRock_true() {
   RPS testRPS = new RPS();
-  assertEquals(false, testRPS.checkWinner("Rock", "Scissors"));
+  assertEquals(true, testRPS.checkWinner("Paper", "Rock"));
   }
 
   @Test
-  public void checkWinner_rockBeatsScissors_true() {
+  public void checkWinner_scissorsBeatsPaper_true() {
   RPS testRPS = new RPS();
-  assertEquals(false, testRPS.checkWinner("Rock", "Scissors"));
+  assertEquals(true, testRPS.checkWinner("Scissors", "Paper"));
   }
-
-
 
 
 }
