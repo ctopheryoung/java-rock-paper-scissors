@@ -13,4 +13,24 @@ public class RPS {
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
   }
+
+  public static Boolean checkWinner(String playerOne, String playerTwo) {
+    if (playerOne.equals("Rock") && playerTwo.equals("Scissors"))
+    {
+      return true;
+    }
+    else if (playerOne.equals("Paper") && playerTwo.equals("Rock"))
+    {
+      return true;
+    }
+    else if (playerOne.equals("Scissors") && playerTwo.equals("Paper"))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
 }
