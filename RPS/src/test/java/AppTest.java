@@ -6,7 +6,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RPSTest extends FluentTest {
+public class AppTest extends FluentTest {
   public WebDriver webDriver = new HtmlUnitDriver();
   public WebDriver getDefaultDriver() {
       return webDriver;
@@ -16,8 +16,8 @@ public class RPSTest extends FluentTest {
   public static ServerRule server = new ServerRule();
 
   @Test
-  public void checkWinner_rockBeatsScissors_true() {
-    RPS testRPS = new RPS();
-    assertEquals(true, testRPS.checkWinner("Rock", "Scissors"));
+  public void rootTest() {
+      goTo("http://localhost:4567/");
+      assertThat(pageSource()).contains("Leap year detector");
   }
 }

@@ -6,6 +6,6 @@ import static spark.Spark.*;
 
 public class RPS {
   public static void main(String[] args) {
-
+    
   }
 }
