@@ -28,10 +28,6 @@ public class RPS {
     return result;
   }
 
-
-
-
-
   public static Boolean checkWinner(String playerOne, String playerTwo) {
     if (playerOne.equals("Rock") && playerTwo.equals("Scissors"))
     {
