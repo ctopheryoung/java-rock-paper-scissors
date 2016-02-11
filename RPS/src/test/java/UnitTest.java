@@ -27,17 +27,11 @@ public class UnitTest {
     assertEquals("You lost!", testRPS.checkWinner("Rock", "Paper"));
   }
 
-  // @Test
-  // public void checkTie_rockTiesRock_true() {
-  //   RPS testRPS = new RPS();
-  //   assertEquals(true, testRPS.checkTie("Rock", "Rock"));
-  // }
-  //
-  // @Test
-  // public void checkTie_rockDontTiePaper_false() {
-  //   RPS testRPS = new RPS();
-  //   assertEquals(false, testRPS.checkTie("Rock", "Paper"));
-  // }
+  @Test
+  public void checkWinner_rockTiesRock_true() {
+    RPS testRPS = new RPS();
+    assertEquals("You tied!", testRPS.checkWinner("Rock", "Rock"));
+  }
 
   @Test
   public void computerPlay_shouldBeAString_true() {
@@ -45,5 +39,4 @@ public class UnitTest {
     String computerChoice =  testRPS.computerPlay();
     assertEquals(true, computerChoice instanceof String);
   }
-
 }
