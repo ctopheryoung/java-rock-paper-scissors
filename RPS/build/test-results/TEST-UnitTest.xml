@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UnitTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-02-10T21:53:02" hostname="epicodus-62.local" time="0.001">
+<testsuite name="UnitTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-02-10T22:19:46" hostname="epicodus-62.local" time="0.0">
   <properties/>
   <testcase name="computerPlay_shouldBeAString_true" classname="UnitTest" time="0.0"/>
-  <testcase name="checkWinner_scissorsBeatsPaper_true" classname="UnitTest" time="0.001"/>
+  <testcase name="checkWinner_scissorsBeatsPaper_true" classname="UnitTest" time="0.0"/>
   <testcase name="checkWinner_rockBeatsScissors_true" classname="UnitTest" time="0.0"/>
   <testcase name="checkWinner_rockLosesToPaper_false" classname="UnitTest" time="0.0"/>
   <testcase name="checkWinner_paperBeatsRock_true" classname="UnitTest" time="0.0"/>

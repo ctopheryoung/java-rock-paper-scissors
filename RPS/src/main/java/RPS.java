@@ -7,10 +7,23 @@ import java.util.Random;
 
 public class RPS {
   public static void main(String[] args) {
-
+    staticFileLocation("/public");
     get("/", (request, response) -> {
-      HashMap model = new HashMap();
+      Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/home.vtl");
+      return new ModelAndView(model, "templates/layout.vtl");
+    }, new VelocityTemplateEngine());
+
+    get("/results", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/results.vtl");
+
+      String player = request.queryParams("player");
+      String computer = computerPlay();
+      String results = checkWinner(player, computer);
+      model.put("player", player);
+      model.put("computer", computer);
+      model.put("results", results);
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
   }
@@ -28,42 +41,26 @@ public class RPS {
     return result;
   }
 
-  public static Boolean checkWinner(String playerOne, String playerTwo) {
+  public static String checkWinner(String playerOne, String playerTwo) {
     if (playerOne.equals("Rock") && playerTwo.equals("Scissors"))
     {
-      return true;
+      return "You won!";
     }
     else if (playerOne.equals("Paper") && playerTwo.equals("Rock"))
     {
-      return true;
+      return "You won!";
     }
     else if (playerOne.equals("Scissors") && playerTwo.equals("Paper"))
     {
-      return true;
+      return "You won!";
+    }
+    else if (playerOne.equals(playerTwo))
+    {
+      return "You tied!";
     }
     else
     {
-      return false;
+      return "You lost!";
     }
   }
-
-  public static Boolean checkTie(String playerOne, String playerTwo) {
-    if (playerOne.equals("Rock") && playerTwo.equals("Rock"))
-    {
-      return true;
-    }
-    else if (playerOne.equals("Paper") && playerTwo.equals("Paper"))
-    {
-      return true;
-    }
-    else if (playerOne.equals("Scissors") && playerTwo.equals("Scissors"))
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
-  }
-
 }

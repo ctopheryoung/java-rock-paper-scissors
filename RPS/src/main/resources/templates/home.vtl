@@ -1,12 +1,10 @@
 <h1>Rock, Paper, Scissors!</h1>
 
-<p>Play some classic RPS.</p>
+<h2>Play some classic RPS against the computer.</h2>
 
-<!-- <form action='/detector' method='get'>
-  <div class="form-group">
-    <label for="year">Year</label>
-    <input id="year" name="year" class="form-control" type="text">
-  </div>
-
-  <button type="submit" class="btn btn-info">Is it a leap year?</button>
-</form> -->
+<h3>Make your choice:</h3>
+<form action='/results' method='get'>
+  <button type="submit" value="Rock" name="player" id="rock"></button>
+  <button type="submit" value="Paper" name="player" id="paper"></button>
+  <button type="submit" value="Scissors" name="player" id="scissors"></button>
+</form>

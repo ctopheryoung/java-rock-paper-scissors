@@ -1,0 +1,46 @@
+body {
+  font-family: 'Bangers', cursive;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+body h1 {
+  font-size: 56px;
+  color: #d01e1e;
+}
+
+#rock {
+  background-image: url(/img/therock.png);
+  background-repeat: no-repeat;
+  border: none;
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+}
+
+#paper {
+  background-image: url(/img/papers.png);
+  background-repeat: no-repeat;
+  border: none;
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+}
+
+#scissors {
+  background-image: url(/img/scissors.jpg);
+  background-repeat: no-repeat;
+  border: none;
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+}
+
+button {
+  margin-top: 50px;
+}
+
+.btn {
+  margin-top: 50px;
+}
